@@ -1,11 +1,282 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// src/pages/index.astro
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>【プロ限定】現場で結果を出す〇〇手技オンラインセミナー</title>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <p class="badge">プロの治療家・整体師向け</p>
+          <h1>明日からの臨床が変わる。<br>〇〇アプローチ実践オンラインセミナー</h1>
+          <p class="hero-date">開催日時：2026年〇月〇日（〇） 20:00〜22:00（Zoom）</p>
+          <a href="https://buy.stripe.com/〇〇〇〇〇" class="btn-primary">今すぐクレジットカードで申し込む</a>
+        </div>
+      </section>
+
+      <section class="pain-points container">
+        <h2>こんな課題を抱えていませんか？</h2>
+        <ul>
+          <li>特定の症状（〇〇など）に対するアプローチに自信がない</li>
+          <li>施術の効果が長続きせず、患者さんのリピートに繋がらない</li>
+          <li>自分の身体に負担のかかる力任せの施術になってしまっている</li>
+        </ul>
+        <p>本セミナーでは、これらの悩みを解決する具体的な手技と理論をお伝えします。</p>
+      </section>
+
+      <section class="curriculum container">
+        <h2>セミナーで学べる内容（カリキュラム）</h2>
+        <div class="card">
+          <h3>1. 〇〇のメカニズムと解剖学的理解（座学）</h3>
+          <p>なぜその痛みが起きるのか、根本的な原因を見極めるための評価方法を解説します。</p>
+        </div>
+        <div class="card">
+          <h3>2. 〇〇への実践的アプローチ（実技デモ）</h3>
+          <p>実際のモデルを使用し、力を使わずに深部へアプローチする手技をカメラで分かりやすく実演します。</p>
+        </div>
+        <div class="card">
+          <h3>3. 質疑応答（Q&A）</h3>
+          <p>皆様からの日々の臨床における疑問に、直接お答えします。</p>
+        </div>
+      </section>
+
+      <section class="profile container">
+        <h2>講師プロフィール</h2>
+        <div class="profile-content">
+          <div class="profile-text">
+            <h3>〇〇 〇〇（あなたの名前）</h3>
+            <p>〇〇整体院 院長 / 施術歴〇〇年</p>
+            <p>ここに簡単な経歴や実績、セミナーに対する想いなどを記載します。これまで〇〇人の施術を行い、〇〇などの独自のメソッドを開発。全国のプロ向けに技術指導を行っている、など信頼感が高まる情報を入れましょう。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="details container">
+        <h2>開催概要</h2>
+        <table class="details-table">
+          <tr>
+            <th>日時</th>
+            <td>2026年〇月〇日（〇） 20:00〜22:00</td>
+          </tr>
+          <tr>
+            <th>開催場所</th>
+            <td>オンライン（Zoom）<br><span class="note">※お支払い完了後、自動でURLをご案内します。</span></td>
+          </tr>
+          <tr>
+            <th>参加費</th>
+            <td>〇,〇〇〇円（税込）</td>
+          </tr>
+          <tr>
+            <th>アーカイブ視聴</th>
+            <td>あり（開催後14日間は何度でも視聴可能）</td>
+          </tr>
+          <tr>
+            <th>キャンセル規定</th>
+            <td>決済完了後のキャンセル・返金はお受けできませんのでご了承ください。</td>
+          </tr>
+        </table>
+        
+        <div class="cta-area">
+          <a href="https://buy.stripe.com/〇〇〇〇〇" class="btn-primary btn-large">今すぐクレジットカードで申し込む</a>
+          <p class="note text-center">※Stripeの安全な決済システムを使用しています</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container text-center">
+        <p>&copy; 2026 〇〇整体院 All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  /* 全体の基本設定 */
+  :root {
+    --primary-color: #2563eb; /* 信頼感のあるブルー */
+    --primary-hover: #1d4ed8;
+    --text-main: #334155;
+    --bg-light: #f8fafc;
+  }
+
+  body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0f172a;
+  }
+
+  /* ヒーローセクション */
+  .hero {
+    background-color: var(--bg-light);
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .badge {
+    display: inline-block;
+    background-color: #ef4444;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.4;
+    color: #0f172a;
+    margin-bottom: 20px;
+  }
+
+  .hero-date {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  /* ボタン */
+  .btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primary-hover);
+  }
+
+  .btn-large {
+    font-size: 1.25rem;
+    padding: 20px 40px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+
+  /* セクション共通 */
+  section {
+    padding: 60px 0;
+  }
+
+  /* ターゲット（課題） */
+  .pain-points ul {
+    background-color: var(--bg-light);
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 30px 30px 30px 50px;
+    margin-bottom: 20px;
+  }
+
+  .pain-points li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  /* カリキュラム */
+  .card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 10px;
+  }
+
+  /* プロフィール */
+  .profile-content {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 8px;
+  }
+
+  /* テーブル（開催概要） */
+  .details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+  }
+
+  .details-table th, .details-table td {
+    border: 1px solid #cbd5e1;
+    padding: 15px;
+    text-align: left;
+  }
+
+  .details-table th {
+    background-color: var(--bg-light);
+    width: 30%;
+  }
+
+  .cta-area {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .note {
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .footer {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px 0;
+    font-size: 0.875rem;
+  }
+
+  /* スマホ向け調整 */
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+    .details-table th, .details-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+</style>
