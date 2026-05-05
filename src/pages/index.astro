@@ -71,9 +71,7 @@
       <section class="profile container">
         <h2 class="section-title">講師プロフィール</h2>
         <div class="profile-content">
-          <div class="profile-image-container">
-            <img src="https://pub-d6415c53699d41b09c3d209c758b2b8a.r2.dev/sasaki-face.png" alt="佐々木 繁光" class="profile-image">
-          </div>
+          
           <div class="profile-text">
             <h3 class="profile-name">佐々木 繁光 <span class="profile-title">（ささき しげみつ）</span></h3>
             <p class="profile-clinic">佐々木整体治療院 院長</p>
@@ -101,6 +99,11 @@
               </dd>
             </dl>
           </div>
+
+          <div class="profile-image-container">
+            <img src="https://via.placeholder.com/120x120/f9fafb/334155?text=Logo+Here" alt="プロフィール画像" class="profile-image">
+          </div>
+
         </div>
       </section>
 
@@ -407,30 +410,34 @@
   .card-text p { margin-bottom: 15px; }
   .card-text p:last-child { margin-bottom: 0; }
 
-  /* プロフィール（美しいリストレイアウトへ変更） */
+  /* プロフィール */
   .profile-content { 
     background-color: var(--bg-light); 
     padding: 50px; 
     border-radius: 8px;
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: space-between; /* ★テキストと画像を左右に振り分ける★ */
   }
+  
   .profile-image-container {
-    width: 120px; /* ★ちょうどいい大きさに調整★ */
-    height: 120px; /* ★ちょうどいい大きさに調整★ */
-    border-radius: 50%; /* ★丸枠★ */
-    overflow: hidden; /* ★画像を丸く切り取るため★ */
-    margin-right: 30px; /* ★テキストとの間隔★ */
-    border: 2px solid var(--border-color); /* ★枠線（任意）★ */
-    background-color: white; /* ★画像が表示されない場合の背景色★ */
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    margin-left: 30px; /* ★右側に置くので、左側に余白を持たせる★ */
+    border: 2px solid var(--border-color); 
+    background-color: white; 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0; /* ★スマホで画像が潰れないようにする★ */
+    flex-shrink: 0; 
   }
   .profile-image {
-    max-width: 100%; /* ★コンテナ内に収める★ */
-    max-height: 100%; /* ★コンテナ内に収める★ */
-    object-fit: contain; /* ★丸枠に収まるように画像を拡大縮小★ */
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; 
   }
   .profile-name { font-size: 1.8rem; color: var(--bg-hero); margin: 0 0 5px 0; }
   .profile-title { font-size: 1.1rem; color: var(--text-light); font-weight: normal; }
@@ -497,8 +504,15 @@
     .hero-seminar-title { text-align: center; } 
     .hero-date { font-size: 1.1rem; padding: 10px; border-left: none; border-top: 4px solid var(--primary-color); text-align: center; }
     .pain-points ul { padding: 30px 20px 30px 40px; }
-    .profile-content { padding: 30px 20px; flex-direction: column; align-items: center; text-align: center; }
-    .profile-image-container { margin-right: 0; margin-bottom: 20px; }
+    .profile-content { 
+      padding: 30px 20px; 
+      flex-direction: column-reverse; /* ★スマホでは画像を上に、テキストを下にする魔法の記述★ */
+      align-items: center; 
+    } 
+    .profile-image-container { 
+      margin-left: 0; 
+      margin-bottom: 20px; /* ★画像の下に余白を作る★ */
+    }
     .profile-list dt { text-align: left; }
     .history-list { text-align: left; }
     .table-common th, .table-common td { display: block; width: 100%; box-sizing: border-box; }
