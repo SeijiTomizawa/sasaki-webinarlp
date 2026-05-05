@@ -71,6 +71,9 @@
       <section class="profile container">
         <h2 class="section-title">講師プロフィール</h2>
         <div class="profile-content">
+          <div class="profile-image-container">
+            <img src="https://pub-d6415c53699d41b09c3d209c758b2b8a.r2.dev/sasaki-face.png" alt="佐々木 繁光" class="profile-image">
+          </div>
           <div class="profile-text">
             <h3 class="profile-name">佐々木 繁光 <span class="profile-title">（ささき しげみつ）</span></h3>
             <p class="profile-clinic">佐々木整体治療院 院長</p>
@@ -152,7 +155,7 @@
                 <td>
                   電話番号：042-383-1619<br>
                   <span class="note">受け付け時間 9：00～19：00（除く日曜・祝日）</span><br>
-                  ウェブフォーム：https://sasaki-seitai.com/contact/
+                  <a href="https://sasaki-seitai.com/contact/" target="_blank" rel="noopener noreferrer">ウェブフォームはこちら</a>
                 </td>
               </tr>
               <tr>
@@ -411,6 +414,24 @@
     border-radius: 8px;
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
   }
+  .profile-image-container {
+    width: 120px; /* ★ちょうどいい大きさに調整★ */
+    height: 120px; /* ★ちょうどいい大きさに調整★ */
+    border-radius: 50%; /* ★丸枠★ */
+    overflow: hidden; /* ★画像を丸く切り取るため★ */
+    margin-right: 30px; /* ★テキストとの間隔★ */
+    border: 2px solid var(--border-color); /* ★枠線（任意）★ */
+    background-color: white; /* ★画像が表示されない場合の背景色★ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* ★スマホで画像が潰れないようにする★ */
+  }
+  .profile-image {
+    max-width: 100%; /* ★コンテナ内に収める★ */
+    max-height: 100%; /* ★コンテナ内に収める★ */
+    object-fit: contain; /* ★丸枠に収まるように画像を拡大縮小★ */
+  }
   .profile-name { font-size: 1.8rem; color: var(--bg-hero); margin: 0 0 5px 0; }
   .profile-title { font-size: 1.1rem; color: var(--text-light); font-weight: normal; }
   .profile-clinic { font-weight: bold; color: var(--primary-color); font-size: 1.2rem; margin-bottom: 30px; }
@@ -472,9 +493,14 @@
     .hero-title-group { flex-direction: column; }
     .hero h1 { font-size: 2.5rem; }
     .hero-illustration { position: static; height: 160px; margin: 20px auto; display: block; }
-    .hero-date { font-size: 1.1rem; padding: 10px; border-left: none; border-top: 4px solid var(--primary-color); }
+    .hero-details { margin-bottom: 30px; display: flex; flex-direction: column; align-items: center; }
+    .hero-seminar-title { text-align: center; } 
+    .hero-date { font-size: 1.1rem; padding: 10px; border-left: none; border-top: 4px solid var(--primary-color); text-align: center; }
     .pain-points ul { padding: 30px 20px 30px 40px; }
-    .profile-content { padding: 30px 20px; }
+    .profile-content { padding: 30px 20px; flex-direction: column; align-items: center; text-align: center; }
+    .profile-image-container { margin-right: 0; margin-bottom: 20px; }
+    .profile-list dt { text-align: left; }
+    .history-list { text-align: left; }
     .table-common th, .table-common td { display: block; width: 100%; box-sizing: border-box; }
     .table-common th { border-bottom: none; }
   }
